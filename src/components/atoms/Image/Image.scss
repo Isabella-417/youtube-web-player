@@ -1,0 +1,48 @@
+@import "../../../index.scss";
+
+$sizes: (
+    1: "small",
+    2: "medium",
+    3: "big",
+);
+
+figure {
+    display: flex;
+    align-items: center;
+    padding: 2em;
+    width: 100%;
+
+    &.vertical {
+        flex-direction: column;
+        padding: 2em, 0;
+
+        img {
+            margin: 1em 0em;
+        }
+    }
+
+    &.horizontal {
+        img {
+            margin: 0em 1em;
+        }
+    }
+
+    figcaption,
+    img {
+        @each $key, $size in $sizes {
+            &.#{$size} {
+                width: ($key) * 15em;
+            }
+        }
+    }
+
+    img {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 8px;
+    }
+
+    figcaption {
+        font-size: $small-font-size;
+        font-weight: bold;
+    }
+}
