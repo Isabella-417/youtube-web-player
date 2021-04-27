@@ -1,10 +1,9 @@
 @import "../../../index.scss";
 
-
 figure {
     display: flex;
     align-items: center;
-    padding: 2em;
+    padding: 2em 0em;
     width: 100%;
 
     &.vertical {
@@ -17,6 +16,7 @@ figure {
     }
 
     &.horizontal {
+        border-bottom: 1px solid white;
         img {
             margin: 0em 1em;
         }
@@ -39,5 +39,6 @@ figure {
     figcaption {
         font-size: $small-font-size;
         font-weight: bold;
+        cursor: pointer;
     }
 }

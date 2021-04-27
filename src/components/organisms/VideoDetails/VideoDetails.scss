@@ -1,8 +1,25 @@
-div.container-video-details {
+@import "../../../index.scss";
 
+div.container-video-details {
     div {
+        @include media-up(tablet) {
+            &.container-video {
+                width: 800px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        @include media-down(tablet) {
+            &.container-video {
+                width: 500px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
         &.container-description {
-            padding: 1em 0.5em;
+            padding: 1em 2em;
         }
     }
 }

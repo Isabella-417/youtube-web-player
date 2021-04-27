@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;1,300&display=swap");
+
+$font-family-title: "Montserrat", sans-serif;
+$small-font-size: 0.9em;
+$medium-font-size: 2em;
+$big-font-size: 4em;
+
+$color-bg: rgba(0, 0, 0, 0.05);
+$color-red-youtube: rgba(255, 0, 0);
+$color-black-youtube: rgba(40, 40, 40);
+
+$sizes: (
+    1: "small",
+    2: "medium",
+    3: "big",
+);
+
+$colors: (
+    "danger": #e76f51,
+    "warning": #e9c46a,
+    "info": #264653,
+);

@@ -1,17 +1,20 @@
 import { ListCards } from "../organisms/ListCards/ListCards";
-import { Search } from "../molecules/Search/Search";
+import { Navbar } from "../organisms/Navbar/Navbar";
 import { VideoDetails } from "../organisms/VideoDetails/VideoDetails";
+import { Search } from "../molecules/Search/Search";
+
 import "../templates/Home.scss";
 
-import { orderSearchedData } from "../services/youtube";
-import testData from "../services/testData.json";
+import { searchVideos, orderSearchedData } from "../services/youtube";
+import testData from "../../assets/data/testData.json";
 
 export const Home = () => {
   const exampleData = orderSearchedData(testData);
   return (
     <>
-      <Search />
-
+      <Navbar>
+        <Search />
+      </Navbar>
       <div className="main-container">
         <main>
           <VideoDetails

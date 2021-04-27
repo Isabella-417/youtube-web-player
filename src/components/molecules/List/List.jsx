@@ -1,4 +1,3 @@
-import { Card } from "../../molecules/Card/Card";
 import { Image } from "../../atoms/Image/Image";
 
 import PropTypes from "prop-types";
@@ -6,13 +5,12 @@ import PropTypes from "prop-types";
 export const List = (props) => (
   <>
     {props.data.map((item) => (
-      <Card key={item.key}>
-        <Image
-          text={item[props.renderKey]}
-          src={item.image.url}
-          alt={item.label}
-        />
-      </Card>
+      <Image
+        key={item.key}
+        text={item[props.renderKey]}
+        src={item.image.url}
+        alt={item.label}
+      />
     ))}
   </>
 );

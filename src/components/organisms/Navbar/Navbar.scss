@@ -1,0 +1,23 @@
+@import "../../../index.scss";
+
+nav {
+    padding: 1em;
+    background-color: #ffffff;
+    ul {
+        li:first-child {
+            font-weight: bold;
+            font-size: $medium-font-size;
+            text-align: center;
+        }
+        li {
+            list-style-type: none;
+            display: block;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+
+            &.center {
+                text-align: center;
+            }
+        }
+    }
+}

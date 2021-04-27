@@ -1,0 +1,21 @@
+@import "mixins";
+@import "utilities";
+@import "variables";
+
+body {
+    margin: 0;
+    font-family: $font-family-title;
+    color: $color-black-youtube;
+
+    @each $key, $coloor in $colors {
+        .#{$key} {
+            color: $coloor;
+        }
+    }
+
+    @for $i from 1 through 6 {
+        h#{7 - $i} {
+            font-size: 3.4em / 6 * $i;
+        }
+    }
+}

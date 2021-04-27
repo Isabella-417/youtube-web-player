@@ -1,14 +1,21 @@
+@import "../../index.scss";
+
 body {
     background-color: rgba(0, 0, 0, 0.05);
 
     div {
-        &.main-container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
+        @include media-up(tablet) {
+            &.main-container {
+                display: flex;
+                margin-left: 2em;
+                margin-right: 1em;
+            }
         }
 
         aside {
-            padding: 2em;
+            color: white;
+            padding: 1em 0.5em;
+            background-color: #333533;
         }
     }
 }
