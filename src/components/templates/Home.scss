@@ -1,0 +1,14 @@
+body {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    div {
+        &.main-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
+
+        aside {
+            padding: 2em;
+        }
+    }
+}

@@ -13,3 +13,13 @@ export const searchVideos = async (searchedParameter) => {
   });
   return await response.data;
 };
+
+export const orderSearchedData = (result) => {
+  return result.map((element) => {
+    return {
+      key: element.id.videoId,
+      label: element.snippet.title,
+      image: element.snippet.thumbnails.default,
+    };
+  });
+};
