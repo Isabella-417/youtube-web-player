@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+
 import "../Image/Image.scss";
 
 export const Image = (props) => {

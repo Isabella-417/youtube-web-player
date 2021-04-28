@@ -7,7 +7,6 @@ export const ListCards = (props) => (
   <Card>
     <div>
       <List
-        onClick={props.onClickSongHandle}
         data={props.data}
         renderKey={props.renderKey}
       />
@@ -16,13 +15,11 @@ export const ListCards = (props) => (
 );
 
 ListCards.propTypes = {
-  onClickSongHandle: PropTypes.func,
   renderKey: PropTypes.string,
   data: PropTypes.arrayOf(PropTypes.object),
 };
 
 ListCards.defaultProps = {
   renderKey: "label",
-  onClickSongHandle: null,
   data: [{}],
 };

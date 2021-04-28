@@ -2,8 +2,6 @@ import PropTypes from "prop-types";
 import "../Navbar/Navbar.scss";
 
 export const Navbar = (props) => {
-  console.log(props.children);
-
   return (
     <nav>
       <ul>
@@ -11,7 +9,9 @@ export const Navbar = (props) => {
         {Array.isArray(props.children) &&
           props.children.map((item) => <li>{item}</li>)}
 
-        {!Array.isArray(props.children) && <li className="center">{props.children}</li>}
+        {!Array.isArray(props.children) && (
+          <li className="center">{props.children}</li>
+        )}
       </ul>
     </nav>
   );
@@ -19,7 +19,6 @@ export const Navbar = (props) => {
 
 Navbar.propTypes = {
   title: PropTypes.string,
-  children: PropTypes.arrayOf(PropTypes.node),
 };
 
 Navbar.defaultProps = {
