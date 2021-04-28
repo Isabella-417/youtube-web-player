@@ -4,7 +4,8 @@ import "../Image/Image.scss";
 
 export const Image = (props) => {
   return (
-    <figure className={props.alignment}>
+    
+    <figure className={props.alignment} onClick={props.handleSelect}>
       <img src={props.src} alt={props.alt} className={props.size} />
       <figcaption className={props.size}>{props.text}</figcaption>
     </figure>
@@ -22,4 +23,5 @@ Image.propTypes = {
   alt: PropTypes.string.isRequired,
   alignment: PropTypes.string,
   size: PropTypes.string,
+  handleSelect: PropTypes.func,
 };

@@ -10,6 +10,7 @@ export const List = (props) => {
           text={item[props.renderKey]}
           src={item.image.url}
           alt={item.label}
+          handleSelect={() => {props.handleSelect(item.key)}}
         />
       ))}
     </>
@@ -21,6 +22,7 @@ List.propTypes = {
   src: PropTypes.string,
   alt: PropTypes.string,
   data: PropTypes.arrayOf(PropTypes.object),
+  handleSelect: PropTypes.func,
 };
 
 List.defaultProps = {
@@ -28,4 +30,5 @@ List.defaultProps = {
   data: [],
   src: "",
   alt: "default image",
+  handleSelect: () => {},
 };
