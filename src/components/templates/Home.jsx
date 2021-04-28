@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Context } from "../../context/context";
 
 import { ListCards } from "../organisms/ListCards/ListCards";
@@ -25,6 +25,17 @@ export const Home = () => {
         });
     }
   };
+
+  useEffect(() => {
+    searchVideos("Pokemon")
+      .then((response) => {
+        const data = orderSearchedData(response.items);
+        setVideo({ playlist: data });
+      })
+      .catch((message) => {
+        console.error(message);
+      });
+  }, []);
 
   return (
     <>

@@ -3,17 +3,15 @@ import {
   orderSearchedData,
   searchVideoByKey,
 } from "../components/services/youtube";
-import testData from "../assets/data/testData.json";
 
 const initialData = {
-  playlist: orderSearchedData(testData),
+  playlist: [{}],
 };
 
 export const Context = createContext(initialData);
 
 export const Provider = ({ children }) => {
   const [video, setVideo] = useState(initialData);
-
   const updatePlaylist = (idVideo) => {
     searchVideoByKey(idVideo)
       .then((response) => {
