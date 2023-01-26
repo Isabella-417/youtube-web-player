@@ -5,7 +5,7 @@ Own personal simple Youtube browser application that allows you to search for an
 
 ## Preview
 
-![Alt text](https://github.com/Isabella-417/youtube-web-player/blob/main/public/image.png)
+<img width="1496" alt="image" src="https://user-images.githubusercontent.com/57917760/214966121-95465809-6c88-43ca-b28c-88ee187f0adb.png">
 
 
 ## Requirements
