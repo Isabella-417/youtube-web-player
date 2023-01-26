@@ -1,21 +1,5 @@
 @import "../../index.scss";
 
-body {
-    background-color: rgba(0, 0, 0, 0.05);
-
-    div {
-        @include media-up(tablet) {
-            &.main-container {
-                display: flex;
-                margin-left: 2em;
-                margin-right: 1em;
-            }
-        }
-
-        aside {
-            color: white;
-            padding: 1em 0.5em;
-            background-color: #333533;
-        }
-    }
+main-container {
+    margin: 2rem;
 }

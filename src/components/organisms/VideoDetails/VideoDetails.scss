@@ -1,25 +1,49 @@
 @import "../../../index.scss";
 
 div.container-video-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
     div {
+        display: flex;
+        flex-direction: column;
+
         @include media-up(tablet) {
             &.container-video {
-                width: 800px;
-                margin-right: auto;
-                margin-left: auto;
+                width: 55vw;
             }
         }
 
         @include media-down(tablet) {
             &.container-video {
-                width: 500px;
+                width: 90vw;
                 margin-right: auto;
                 margin-left: auto;
             }
         }
 
+        &.container-title {
+            font-size: 0.4rem;
+            width: 95vw;
+            padding: 2rem;
+        }
+
         &.container-description {
-            padding: 1em 2em;
+            padding: 1em;
+            background-color: rgb(39,39,39);
+            border-radius: 0.5rem;
+            overflow-y: scroll;
+            max-height: 10rem;
+            color: white;
+            width: 95vw;
+            line-height: 1.6rem;
+            text-align: justify;
+
+            p {
+                margin: 0 1rem;
+            }
         }
     }
 }

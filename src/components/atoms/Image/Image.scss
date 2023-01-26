@@ -2,10 +2,9 @@
 
 figure {
     display: flex;
-    align-items: center;
-    padding: 2em 0em;
-    width: 100%;
+    padding: 1em 0em;
     cursor: pointer;
+    font-size: 1.5rem;
 
     &.vertical {
         flex-direction: column;
@@ -17,9 +16,17 @@ figure {
     }
 
     &.horizontal {
-        border-bottom: 1px solid white;
         img {
             margin: 0em 1em;
+        }
+        &:hover{
+            background-color: rgb(39, 39, 39);
+        }
+        @include media-down(tablet) {
+            flex-direction: column;
+            img {
+                margin: 1em 0em;
+            }
         }
     }
 
@@ -40,5 +47,10 @@ figure {
     figcaption {
         font-size: $small-font-size;
         font-weight: bold;
+        width: 40vw;
+        text-align: justify;
+        @include media-down(tablet) {
+            width: 80vw;
+        }
     }
 }

@@ -3,9 +3,11 @@
 @import "variables";
 
 body {
-    margin: 0;
     font-family: $font-family-title;
-    color: $color-black-youtube;
+    color: white;
+    background-color: rgb(15,15,15);
+    margin: 0;
+
 
     @each $key, $coloor in $colors {
         .#{$key} {

@@ -4,12 +4,12 @@ import PropTypes from "prop-types";
 export const Video = (props) => {
   return (
     <div className="video-container">
-      <iframe  title={props.title} src={props.url}></iframe>
+      <iframe  src={props.url} title={props.title} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
     </div>
   );
 };
 
 Video.propTypes = {
-  url: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  url: PropTypes.string,
+  title: PropTypes.string,
 };

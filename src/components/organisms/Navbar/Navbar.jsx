@@ -1,11 +1,14 @@
 import PropTypes from "prop-types";
 import "../Navbar/Navbar.scss";
+import youtubeLogo from "../../../assets/images/youtube.svg";
 
 export const Navbar = (props) => {
   return (
-    <nav>
+    <nav className="navbar">
       <ul>
-        <li>{props.title}</li>
+        <li>
+         <img src={youtubeLogo} height={50} width={100} alt="youtube logo" />
+        </li>
         {Array.isArray(props.children) &&
           props.children.map((item) => <li>{item}</li>)}
 

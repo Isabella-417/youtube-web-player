@@ -1,20 +1,21 @@
 import PropTypes from "prop-types";
-
+import { escapeHtml } from "../../../lib.js";
 import "../Image/Image.scss";
 
 export const Image = (props) => {
+  const  { text, size, handleSelect } = props;
+  
   return (
-    
-    <figure className={props.alignment} onClick={props.handleSelect}>
-      <img src={props.src} alt={props.alt} className={props.size} />
-      <figcaption className={props.size}>{props.text}</figcaption>
+    <figure className={props.alignment} onClick={handleSelect}>
+      <img src={props.src} alt={props.alt} className={size} />
+      <figcaption className={props.size}>{escapeHtml(text)}</figcaption>
     </figure>
   );
 };
 
 Image.defaultProps = {
   alignment: "horizontal",
-  size: "small",
+  size: "medium",
 };
 
 Image.propTypes = {

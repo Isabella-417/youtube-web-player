@@ -52,11 +52,13 @@ export const orderSearchedData = (result) => {
     return {
       key: element.id.videoId ? element.id.videoId : element.id,
       label: element.snippet.title,
-      image: element.snippet.thumbnails.default,
+      image: element.snippet.thumbnails.high,
       url: `https://www.youtube.com/embed/${
         element.id.videoId ? element.id.videoId : element.id
-      }?controls=0`,
+      }`,
       description: element.snippet.description,
+      title: element.snippet.title,
+      channel_name: element.snippet.channelTitle,
     };
   });
 };

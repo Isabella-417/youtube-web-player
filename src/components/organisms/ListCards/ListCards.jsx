@@ -10,9 +10,7 @@ export const ListCards = (props) => {
 
   return (
     <Card>
-      <div>
         <List data={props.data} handleSelect={updatePlaylist} renderKey={props.renderKey} />
-      </div>
     </Card>
   );
 };

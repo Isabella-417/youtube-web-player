@@ -27,7 +27,7 @@ export const Home = () => {
   };
 
   useEffect(() => {
-    searchVideos("Pokemon")
+    searchVideos("Das lyed")
       .then((response) => {
         const data = orderSearchedData(response.items);
         setVideo({ playlist: data });

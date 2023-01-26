@@ -7,7 +7,7 @@ export const Logo = (props) => {
 
 Logo.defaultProps = {
   alignment: "horizontal",
-  size: "small",
+  size: "medium",
 };
 
 Logo.propTypes = {

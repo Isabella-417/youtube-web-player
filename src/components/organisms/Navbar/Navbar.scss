@@ -1,9 +1,21 @@
 @import "../../../index.scss";
 
 nav {
-    padding: 1em;
-    background-color: #ffffff;
+    background-color: rgb(18,18,18);
     ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70vw;
+        height: 15vh;
+        margin: 0;
+
+        @include media-down(tablet) {
+            height: 5rem;
+            padding: 2rem;
+            width: 90vw;
+        }
+
         li:first-child {
             font-weight: bold;
             font-size: $medium-font-size;
