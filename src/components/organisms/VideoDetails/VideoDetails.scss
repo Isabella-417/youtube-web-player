@@ -1,49 +1,31 @@
-@import "../../../index.scss";
+.container-description {
+  background-color: #1f2937;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 300px;
+  transition: max-height 0.3s ease;
 
-div.container-video-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    div {
-        display: flex;
-        flex-direction: column;
+  @media (max-width: 768px) {
+    padding: 0;
+  }
 
-        @include media-up(tablet) {
-            &.container-video {
-                width: 55vw;
-            }
-        }
+  &.expanded {
+    max-height: none;
+    overflow: visible;
+  }
 
-        @include media-down(tablet) {
-            &.container-video {
-                width: 90vw;
-                margin-right: auto;
-                margin-left: auto;
-            }
-        }
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
 
-        &.container-title {
-            font-size: 0.4rem;
-            width: 95vw;
-            padding: 2rem;
-        }
-
-        &.container-description {
-            padding: 1em;
-            background-color: rgb(39,39,39);
-            border-radius: 0.5rem;
-            overflow-y: scroll;
-            max-height: 10rem;
-            color: white;
-            width: 95vw;
-            line-height: 1.6rem;
-            text-align: justify;
-
-            p {
-                margin: 0 1rem;
-            }
-        }
-    }
+  .toggle-button {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0;
+  }
 }

@@ -1,5 +1,43 @@
 @import "../../index.scss";
 
-main-container {
-    margin: 2rem;
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 2rem;
+  padding-bottom: 2rem;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+
+  main {
+    flex: 3;
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    color: white;
+    min-height: 0;
+  }
+
+  aside {
+    flex: 1;
+    background-color: #0f0f0f;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+
+    main, aside {
+      width: 100%;
+      padding: 1rem 0.5rem;
+    }
+  }
 }

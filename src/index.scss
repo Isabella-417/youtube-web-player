@@ -1,2 +1,15 @@
 @import-normalize;
 @import './assets/scss/youtube-web-player.scss';
+@import "./assets/scss/responsive.scss";
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}

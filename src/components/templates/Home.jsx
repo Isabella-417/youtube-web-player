@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { Context } from "../../context/context";
 
 import { ListCards } from "../organisms/ListCards/ListCards";
@@ -11,6 +11,7 @@ import { searchVideos, orderSearchedData } from "../services/youtube";
 
 export const Home = () => {
   const { video, setVideo } = useContext(Context);
+  const ref = useRef(null);
 
   const handleSearch = (e) => {
     if (e.charCode === 13) {
@@ -26,8 +27,12 @@ export const Home = () => {
     }
   };
 
+  const focusVideo = () => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   useEffect(() => {
-    searchVideos("Das lyed")
+    searchVideos("TypeScript advanced patterns")
       .then((response) => {
         const data = orderSearchedData(response.items);
         setVideo({ playlist: data });
@@ -42,12 +47,12 @@ export const Home = () => {
       <Navbar>
         <Search onKeyPress={handleSearch} />
       </Navbar>
-      <div className="main-container">
+      <div className="main-container" ref={ref}>
         <main>
           <VideoDetails />
         </main>
         <aside>
-          <ListCards data={video.playlist.slice(1)} />
+          <ListCards data={video.playlist.slice(1)} focus={focusVideo} />
         </aside>
       </div>
     </>

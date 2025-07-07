@@ -1,14 +1,11 @@
 import PropTypes from "prop-types";
+import "./Card.scss";
 
-export const Card = (props) => (
-  <div className={props.style}> {props.children}</div>
-);
+export const Card = ({ children, className }) => {
+  return <div className={`card ${className || ""}`}>{children}</div>;
+};
 
 Card.propTypes = {
   children: PropTypes.node.isRequired,
-  type: PropTypes.string.isRequired,
-};
-
-Card.defaultProps = {
-  type: "light",
+  className: PropTypes.string,
 };

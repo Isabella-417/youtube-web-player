@@ -6,11 +6,12 @@ import { Card } from "../../molecules/Card/Card";
 import { List } from "../../molecules/List/List";
 
 export const ListCards = (props) => {
+  const { data, focus, renderKey }  = props;
   const { updatePlaylist } = useContext(Context);
 
   return (
     <Card>
-        <List data={props.data} handleSelect={updatePlaylist} renderKey={props.renderKey} />
+        <List data={data} handleSelect={updatePlaylist} renderKey={renderKey} focus={focus} />
     </Card>
   );
 };

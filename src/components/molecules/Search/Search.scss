@@ -1,8 +1,22 @@
 input {
-    border-radius: 40px;
-    background-color: rgb(18,18,18);
-    color: rgb(231 224 224);
-    font-weight: 500;
-    border: 1px solid rgb(128,128,128, 0.7);
-    
+  width: 100%;
+  max-width: 600px;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  background-color: #121212;
+  color: #f1f1f1;
+  font-size: 0.95rem;
+  font-weight: 400;
+  border: 1px solid #303030;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+
+  &::placeholder {
+    color: #888;
+  }
+
+  &:focus {
+    border-color: #3ea6ff;
+    box-shadow: 0 0 0 2px rgba(62, 166, 255, 0.3);
+  }
 }
